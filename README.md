@@ -1,5 +1,11 @@
-# ub1nu11 samurai
+# ub1nu11 samurai LAMP docker
 ![](https://github.com/nu11secur1ty/ub1nu11/blob/master/logo/samurai.jpg)
+
+- ***Apache2.4***
+- ***PHP 7***
+- ***Maria DB***
+--------------------------------------------------------------------------------------------
+
 
 - Getting a source
 ```bash
