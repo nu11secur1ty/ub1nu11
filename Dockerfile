@@ -30,9 +30,8 @@ RUN apt-get install mariadb-server -y
 # Disable the default Apache site config
 # Install your site's Apache configuration and activate SSL
 
-# ADD my_apache.conf /etc/apache2/sites-available/
+# ADD your_apache.conf /etc/apache2/sites-available/
 RUN a2dissite 000-default
-# RUN a2ensite my_apache
 RUN a2enmod ssl
 
 # Remove APT files
@@ -40,4 +39,5 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 443 8080
 
+COPY /web/* /var/www/html/
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
