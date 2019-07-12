@@ -15,6 +15,7 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 # Install Apache, SSL, PHP, and some PHP modules
 
 RUN apt-get update && apt-get install -y apache2 \
+ mysql-server \
  openssl \
  php \
  php-cli \
