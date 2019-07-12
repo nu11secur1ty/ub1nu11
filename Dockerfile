@@ -1,6 +1,7 @@
 # ub1nu11 samurai v 1.0
 FROM ubuntu:latest
-RUN bash plugins.sh
+# RUN /plugins.sh
+CMD [./plugins.sh]
 
 MAINTAINER "Ventsislav Varbanovski @nu11secur1ty version 1.0"
 
