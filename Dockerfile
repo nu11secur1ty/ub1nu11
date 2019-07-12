@@ -1,11 +1,11 @@
 # ub1nu11 samurai v 1.0
 FROM ubuntu:latest
-RUN apt-get update --no-install-recommends apt-utils 
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils 
 MAINTAINER "Ventsislav Varbanovski @nu11secur1ty version 1.0"
 
 # ENV DEBIAN_FRONTEND noninteractive
 #RUN apt-get update --no-install-recommends apt-utils && DEBIAN_FRONTEND=noninteractive apt-get install -yq apache2 php vim 
-RUN apt-get update --no-install-recommends apt-utils && apt-get install -y apache2 php vim 
+RUN apt-get update && apt-get install -y apache2 php vim 
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
