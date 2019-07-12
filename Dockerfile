@@ -37,6 +37,9 @@ RUN a2enmod ssl
 # Remove APT files
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN rm -rf /var/www/html/*
+COPY /web/* /var/www/html/
+
 EXPOSE 443 8080
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
