@@ -28,6 +28,13 @@ http://localhost:8080/
 ```url
 http://localhost:8080/info.php
 ```
+- MysQL
+```bash
+bash logininside.sh
+/etc/init.d/mysql start
+/etc/init.d/mysql status
+mysql -uroot -ppassword
+```
 
 # Login in docker
 ```bash
