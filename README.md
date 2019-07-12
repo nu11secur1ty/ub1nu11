@@ -36,7 +36,7 @@ root@252a679b8104:/#
 ```
 # Stop samurai ub1nu11 docker
 ```bash
-bash stopdocker.sh
+bash stopsamurai.sh
 ```
 # Removing of the already compose ub1nu11 docker image
 ```bash
