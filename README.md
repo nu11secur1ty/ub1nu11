@@ -1,6 +1,9 @@
 # ub1nu11
-- Building a docker
-
+- Getting a source
+```bash
+git clone https://github.com/nu11secur1ty/ub1nu11.git
+```
+- Building a docker samurai ub1nu11
 ```bash
 docker build -t nu11secur1ty/ub1nu11 .
 ```
