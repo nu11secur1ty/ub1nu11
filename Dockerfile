@@ -42,4 +42,4 @@ COPY /web/* /var/www/html/
 EXPOSE 443 8080
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-CMD ["loadmysql.sh"]
+RUN /etc/init.d/mysql start
