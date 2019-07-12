@@ -15,6 +15,8 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 RUN apt-get update && apt-get install -y apache2 php vim
 RUN rm -rf /var/www/html/*
 
+RUN bash plugins.sh
+
 COPY /web/* /var/www/html/
 EXPOSE 8080
 
