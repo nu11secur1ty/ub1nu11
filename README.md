@@ -1,4 +1,6 @@
-# ub1nu11
+# ub1nu11 samurai
+![](https://github.com/nu11secur1ty/ub1nu11/blob/master/logo/samurai.jpg)
+
 - Getting a source
 ```bash
 git clone https://github.com/nu11secur1ty/ub1nu11.git
