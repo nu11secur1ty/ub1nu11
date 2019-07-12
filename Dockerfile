@@ -31,7 +31,6 @@ RUN apt-get install mariadb-server -y
 
 #ADD my_apache.conf /etc/apache2/sites-available/
 RUN a2dissite 000-default
-RUN a2ensite my_apache
 RUN a2enmod ssl
 
 # Remove APT files
