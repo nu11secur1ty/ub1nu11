@@ -1,7 +1,7 @@
 # ub1nu11 samurai v 1.0
 FROM ubuntu:latest
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
+# RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 MAINTAINER "Ventsislav Varbanovski @nu11secur1ty version 1.0"
 
 # Ubuntu LAMP stack with Apache, MariaDB, PHP, and SSL
@@ -17,9 +17,9 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 
 RUN apt-get update && apt-get install -y apache2 \
  openssl \
- php5 \
- php5-cli \
- php5-apcu
+ php \
+ php-cli \
+ php-apcu
 
 # Install MariaDB and set default root password
 
@@ -30,9 +30,9 @@ RUN apt-get install mariadb-server -y
 # Disable the default Apache site config
 # Install your site's Apache configuration and activate SSL
 
-ADD my_apache.conf /etc/apache2/sites-available/
+# ADD my_apache.conf /etc/apache2/sites-available/
 RUN a2dissite 000-default
-RUN a2ensite my_apache
+# RUN a2ensite my_apache
 RUN a2enmod ssl
 
 # Remove APT files
