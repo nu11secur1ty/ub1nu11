@@ -1,6 +1,6 @@
 # ub1nu11 samurai v 1.0
 FROM ubuntu:latest
-
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 MAINTAINER "Ventsislav Varbanovski @nu11secur1ty version 1.0"
 
 # ENV DEBIAN_FRONTEND noninteractive
