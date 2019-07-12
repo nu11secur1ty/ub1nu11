@@ -1,5 +1,4 @@
-# Barebones Apache installation on Ubuntu
-
+# ub1nu11 samurai v 1.0
 FROM ubuntu:latest
 
 MAINTAINER "Ventsislav Varbanovski @nu11secur1ty version 1.0"
