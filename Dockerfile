@@ -1,12 +1,10 @@
 # ub1nu11 samurai v 1.0
 FROM ubuntu:latest
-# RUN /plugins.sh
 
 MAINTAINER "Ventsislav Varbanovski @nu11secur1ty version 1.0"
 
 # ENV DEBIAN_FRONTEND noninteractive
-RUN export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install --assume-yes apache2 php vim
-
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq apache2 php vim
 # RUN apt-get update && apt-get install -y apache2 php vim
 
 ENV APACHE_RUN_USER www-data
