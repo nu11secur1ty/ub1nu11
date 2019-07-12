@@ -16,7 +16,6 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 
 # Install Apache, SSL, PHP, and some PHP modules
 RUN apt-get update && apt-get install -y apache2 \
- mariadb-server \
  openssl \
  php \
  php-cli \
@@ -25,6 +24,7 @@ RUN apt-get update && apt-get install -y apache2 \
 # Install MariaDB and set default root password
 RUN echo 'mariadb-server mariadb-server/root_password  password mypassword' | debconf-set-selections
 RUN echo 'mariadb-server mariadb-server/root_password_again password mypassword' | debconf-set-selections
+RUN zypper install -n mariadb-server
 
 # Disable the default Apache site config
 # Install your site's Apache configuration and activate SSL
