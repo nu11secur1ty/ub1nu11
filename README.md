@@ -20,9 +20,11 @@ docker run -d -p 8080:80 --name samurai nu11secur1ty/ub1nu11
 ```
 - Testing
 ```bash
-http://192.168.1.7:8080/
-http://192.168.1.7:8080/info.php
+http://localhost:8080/
+http://localhost:8080/info.php
 ```
+- Note 
+`You can use your IP`!
 ------------------------------------------------
 # Manual
 
