@@ -13,7 +13,17 @@ https://hub.docker.com/r/nu11secur1ty/ub1nu11
 ```bash
 docker pull nu11secur1ty/ub1nu11
 ```
-
+- Runing the docker
+```bash
+docker run -d -p 8080:80 --name samurai nu11secur1ty/ub1nu11
+```
+- Test
+```bash
+http://192.168.1.7:8080/
+http://192.168.1.7:8080/info.php
+```
+------------------------------------------------
+# Manual
 
 - Getting a source
 ```bash
