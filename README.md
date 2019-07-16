@@ -9,15 +9,16 @@ https://hub.docker.com/r/nu11secur1ty/ub1nu11
 - ***PHP 7***
 - ***Maria DB***
 --------------------------------------------------------------------------------------------
-# Fast way to start this samurai
+# Fast way to starting this samurai - docker
+
 ```bash
 docker pull nu11secur1ty/ub1nu11
 ```
-- Runing the docker
+- Starting the docker
 ```bash
 docker run -d -p 8080:80 --name samurai nu11secur1ty/ub1nu11
 ```
-- Test
+- Testing
 ```bash
 http://192.168.1.7:8080/
 http://192.168.1.7:8080/info.php
