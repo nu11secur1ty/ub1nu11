@@ -9,6 +9,10 @@ https://hub.docker.com/r/nu11secur1ty/ub1nu11
 - ***PHP 7***
 - ***Maria DB***
 --------------------------------------------------------------------------------------------
+# Fast way to start this samurai
+```bash
+docker pull nu11secur1ty/ub1nu11
+```
 
 
 - Getting a source
