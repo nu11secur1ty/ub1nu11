@@ -23,8 +23,16 @@ docker run -d -p 8080:80 --name samurai nu11secur1ty/ub1nu11
 http://localhost:8080/
 http://localhost:8080/info.php
 ```
+- MySQL
+```bash
+bash logininside.sh
+/etc/init.d/mysql start
+/etc/init.d/mysql status
+mysql -uroot -ppassword
+```
 - Note 
 `You can use your IP`!
+
 ------------------------------------------------
 # Manual
 
