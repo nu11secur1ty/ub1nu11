@@ -37,7 +37,12 @@ RUN a2enmod ssl
 # Remove APT files
 RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Update
+# Update and packages
+RUN apt update -y
+RUN apt dist-upgrade -y
+RUN apt install -y nmap \
+vim \
+net-tools 
 RUN apt update -y
 RUN apt dist-upgrade -y
 
