@@ -15,7 +15,7 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 
 # Install Apache, SSL, PHP, and some PHP modules
 
-RUN apt-get update && apt-get install -y apache2 \
+RUN apt update && apt install -y apache2 \
  openssl \
  php \
  php-cli \
@@ -35,7 +35,11 @@ RUN a2dissite 000-default
 RUN a2enmod ssl
 
 # Remove APT files
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Update
+RUN apt update -y
+RUN apt dist-upgrade -y
 
 EXPOSE 443 8080
 
