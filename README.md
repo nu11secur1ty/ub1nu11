@@ -14,6 +14,10 @@ https://hub.docker.com/r/nu11secur1ty/ub1nu11
 ```bash
 docker pull nu11secur1ty/ub1nu11
 ```
+- shell access
+```bash
+docker run -t -i nu11secur1ty/nu11secur1ty/ub1nu11 /bin/bash
+```
 - Starting the docker
 ```bash
 docker run -d -p 8080:80 --name samurai nu11secur1ty/ub1nu11
