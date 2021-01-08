@@ -55,5 +55,6 @@ COPY protect.sh /
 RUN cd /
 CMD bash protect.sh
 COPY 000-default.conf /etc/apache2/sites-enabled/
+COPY 000-default.conf /etc/apache2/sites-available/
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
