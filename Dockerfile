@@ -50,5 +50,8 @@ EXPOSE 443 8080
 
 COPY /web/* /var/www/html/
 COPY secret /var/www/html/
+RUN cd /etc/apache2/sites-enabled/
+RUN rm 000-default.conf
+COPY 000-default.conf /etc/apache2/sites-enabled/
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
