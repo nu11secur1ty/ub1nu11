@@ -49,11 +49,12 @@ RUN apt dist-upgrade -y
 EXPOSE 443 8080
 
 COPY /web/* /var/www/html/
-COPY /sec/* /
+# COPY /sec/* /
 RUN touch /etc/apache2/secret
+COPY /sec/protect /etc/apache2/secret
 
 # Protect 
-RUN htpasswd -b -c /etc/apache2/secret opsec password
+# RUN htpasswd -b -c /etc/apache2/secret opsec password
 
 COPY 000-default.conf /etc/apache2/sites-enabled/
 COPY 000-default.conf /etc/apache2/sites-available/
