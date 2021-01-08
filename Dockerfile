@@ -51,9 +51,10 @@ EXPOSE 443 8080
 COPY /web/* /var/www/html/
 
 # Protect 
-COPY protect.sh /
-RUN cd /
-CMD bash protect.sh
+# COPY protect.sh /
+ADD protect.sh /root/protect.sh
+CMD [./protect.sh]
+# CMD bash protect.sh
 COPY 000-default.conf /etc/apache2/sites-enabled/
 COPY 000-default.conf /etc/apache2/sites-available/
 
