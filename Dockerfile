@@ -49,6 +49,8 @@ RUN apt dist-upgrade -y
 EXPOSE 443 8080
 
 COPY /web/* /var/www/html/
+
+# Protect 
 COPY protect.sh /root/
 RUN cd /root/
 RUN bash protect.sh
