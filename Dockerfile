@@ -1,4 +1,4 @@
-# ub1nu11 samurai v 1.0
+# ub1nu11 samurai v 2021.1
 FROM debian:latest
 ENV DEBIAN_FRONTEND noninteractive
 # RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
@@ -54,10 +54,7 @@ RUN touch /etc/apache2/secret
 
 # Protect 
 RUN htpasswd -b -c /etc/apache2/secret opsec password
-#RUN cd /
-#RUN chmod a+x protect.sh 
-#CMD ["bash ./protect.sh"]
-# CMD bash protect.sh
+
 COPY 000-default.conf /etc/apache2/sites-enabled/
 COPY 000-default.conf /etc/apache2/sites-available/
 
