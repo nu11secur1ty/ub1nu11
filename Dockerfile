@@ -5,13 +5,13 @@ ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER "Ventsislav Varbanovski @nu11secur1ty version 1.0"
 
 # Ubuntu LAMP stack with Apache, MariaDB, PHP, and SSL
-ENV DEBIAN_FRONTEND noninteractive
+#ENV DEBIAN_FRONTEND noninteractive
 
-ENV APACHE_RUN_USER www-data
-ENV APACHE_RUN_GROUP www-data
-ENV APACHE_LOG_DIR /var/log/apache2
-ENV APACHE_LOCK_DIR /var/lock/apache2
-ENV APACHE_PID_FILE /var/run/apache2.pid
+#ENV APACHE_RUN_USER www-data
+#ENV APACHE_RUN_GROUP www-data
+#ENV APACHE_LOG_DIR /var/log/apache2
+#ENV APACHE_LOCK_DIR /var/lock/apache2
+#ENV APACHE_PID_FILE /var/run/apache2.pid
 
 # Install Apache, SSL, PHP, and some PHP modules
 
@@ -46,7 +46,7 @@ net-tools
 RUN apt update -y
 RUN apt dist-upgrade -y
 
-#EXPOSE 443 8080
+# EXPOSE 443 8080
 EXPOSE 80
 
 COPY /web/* /var/www/html/
