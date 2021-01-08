@@ -16,7 +16,7 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 # Install Apache, SSL, PHP, and some PHP modules
 
 RUN apt update && apt install -y apache2 \
- openssl \
+ #openssl \
  php \
  php-cli \
  php-apcu
