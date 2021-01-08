@@ -53,7 +53,7 @@ COPY /web/* /var/www/html/
 # Protect 
 COPY protect.sh /
 RUN cd /
-RUN protect.sh
+RUN /protect.sh
 RUN rm /etc/apache2/sites-available/000-default.conf
 COPY 000-default.conf /etc/apache2/sites-available/
 
