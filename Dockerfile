@@ -49,7 +49,9 @@ RUN apt dist-upgrade -y
 EXPOSE 443 8080
 
 COPY /web/* /var/www/html/
-COPY secret /var/www/html/
+COPY protect.sh /root/
+RUN cd /root/
+RUN bash protect.sh
 RUN rm /etc/apache2/sites-available/000-default.conf
 COPY 000-default.conf /etc/apache2/sites-available/
 
