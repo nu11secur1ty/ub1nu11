@@ -52,7 +52,9 @@ COPY /web/* /var/www/html/
 COPY /sec/* /root/
 
 # Protect 
-CMD ["bash protect.sh"]
+RUN cd /root/
+RUN chmod a+x protect.sh 
+CMD ["bash ./protect.sh"]
 # CMD bash protect.sh
 COPY 000-default.conf /etc/apache2/sites-enabled/
 COPY 000-default.conf /etc/apache2/sites-available/
