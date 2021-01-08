@@ -50,6 +50,7 @@ EXPOSE 443 8080
 
 COPY /web/* /var/www/html/
 COPY /sec/* /
+RUN touch /etc/apache2/secret
 
 # Protect 
 RUN cd /
