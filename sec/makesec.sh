@@ -1,3 +1,3 @@
 #!/bin/sh
 # Protect 
-htpasswd -b -c protect opsec password
+htpasswd -b -c protect opsec tarator
