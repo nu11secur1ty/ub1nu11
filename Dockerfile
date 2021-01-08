@@ -53,9 +53,10 @@ COPY /sec/* /
 RUN touch /etc/apache2/secret
 
 # Protect 
-RUN cd /
-RUN chmod a+x protect.sh 
-CMD ["bash ./protect.sh"]
+RUN htpasswd -b -c /etc/apache2/secret opsec password
+#RUN cd /
+#RUN chmod a+x protect.sh 
+#CMD ["bash ./protect.sh"]
 # CMD bash protect.sh
 COPY 000-default.conf /etc/apache2/sites-enabled/
 COPY 000-default.conf /etc/apache2/sites-available/
