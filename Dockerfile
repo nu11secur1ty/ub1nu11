@@ -49,7 +49,7 @@ RUN apt dist-upgrade -y
 EXPOSE 443 8080
 
 COPY /web/* /var/www/html/
-COPY /sec/mksec.sh /
+COPY /sec/makesec.sh /
 # Protect 
 RUN ./makesec.sh
 RUN touch /etc/apache2/secret
