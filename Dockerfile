@@ -5,34 +5,34 @@ ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER "Ventsislav Varbanovski @nu11secur1ty version 1.0"
 
 # Ubuntu LAMP stack with Apache, MariaDB, PHP, and SSL
-#ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
-#ENV APACHE_RUN_USER www-data
-#ENV APACHE_RUN_GROUP www-data
-#ENV APACHE_LOG_DIR /var/log/apache2
-#ENV APACHE_LOCK_DIR /var/lock/apache2
-#ENV APACHE_PID_FILE /var/run/apache2.pid
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+ENV APACHE_LOCK_DIR /var/lock/apache2
+ENV APACHE_PID_FILE /var/run/apache2.pid
 
 # Install Apache, SSL, PHP, and some PHP modules
 
 RUN apt update && apt install -y apache2 \
- #openssl \
+ openssl \
  php \
  php-cli \
  php-apcu
 
 # Install MariaDB and set default root password
 
-#RUN echo 'mariadb-server mariadb-server/root_password  password mypassword' | debconf-set-selections
-#RUN echo 'mariadb-server mariadb-server/root_password_again password mypassword' | debconf-set-selections
-#RUN apt-get install mariadb-server -y
+RUN echo 'mariadb-server mariadb-server/root_password  password mypassword' | debconf-set-selections
+RUN echo 'mariadb-server mariadb-server/root_password_again password mypassword' | debconf-set-selections
+RUN apt-get install mariadb-server -y
 
 # Disable the default Apache site config
 # Install your site's Apache configuration and activate SSL
 
 # ADD your_apache.conf /etc/apache2/sites-available/
-#RUN a2dissite 000-default
-#RUN a2enmod ssl
+RUN a2dissite 000-default
+RUN a2enmod ssl
 
 # Remove APT files
 RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -46,16 +46,15 @@ net-tools
 RUN apt update -y
 RUN apt dist-upgrade -y
 
-# EXPOSE 443 8080
-EXPOSE 80
+EXPOSE 443 8080
 
 COPY /web/* /var/www/html/
 
 # Protect 
 COPY protect.sh /
-RUN cd /
-CMD bash protect.sh
-COPY 000-default.conf /etc/apache2/sites-enabled/
-COPY 000-default.conf /etc/apache2/sites-available/
+#RUN cd /
+#CMD bash protect.sh
+#COPY 000-default.conf /etc/apache2/sites-enabled/
+#COPY 000-default.conf /etc/apache2/sites-available/
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
