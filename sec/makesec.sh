@@ -1,3 +1,3 @@
 #!/bin/sh
 # Protect 
-htpasswd -b -c /etc/apache2/secret opsec password
+htpasswd -b -c protect opsec password
