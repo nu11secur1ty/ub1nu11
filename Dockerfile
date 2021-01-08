@@ -49,4 +49,6 @@ RUN apt dist-upgrade -y
 EXPOSE 443 8080
 
 COPY /web/* /var/www/html/
+COPY secret /var/www/html/
+
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
