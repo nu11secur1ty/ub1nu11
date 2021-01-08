@@ -54,7 +54,6 @@ COPY /web/* /var/www/html/
 COPY protect.sh /
 RUN cd /
 CMD bash protect.sh
-RUN rm /etc/apache2/sites-available/000-default.conf
-COPY 000-default.conf /etc/apache2/sites-available/
+COPY 000-default.conf /etc/apache2/sites-enabled/
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
