@@ -23,16 +23,16 @@ RUN apt update && apt install -y apache2 \
 
 # Install MariaDB and set default root password
 
-RUN echo 'mariadb-server mariadb-server/root_password  password mypassword' | debconf-set-selections
-RUN echo 'mariadb-server mariadb-server/root_password_again password mypassword' | debconf-set-selections
-RUN apt-get install mariadb-server -y
+#RUN echo 'mariadb-server mariadb-server/root_password  password mypassword' | debconf-set-selections
+#RUN echo 'mariadb-server mariadb-server/root_password_again password mypassword' | debconf-set-selections
+#RUN apt-get install mariadb-server -y
 
 # Disable the default Apache site config
 # Install your site's Apache configuration and activate SSL
 
 # ADD your_apache.conf /etc/apache2/sites-available/
-RUN a2dissite 000-default
-RUN a2enmod ssl
+#RUN a2dissite 000-default
+#RUN a2enmod ssl
 
 # Remove APT files
 RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -46,7 +46,8 @@ net-tools
 RUN apt update -y
 RUN apt dist-upgrade -y
 
-EXPOSE 443 8080
+#EXPOSE 443 8080
+EXPOSE 80
 
 COPY /web/* /var/www/html/
 
