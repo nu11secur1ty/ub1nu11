@@ -53,9 +53,6 @@ COPY /web/* /var/www/html/
 RUN touch /etc/apache2/secret
 COPY /sec/protect /etc/apache2/secret
 
-# Protect 
-# RUN htpasswd -b -c /etc/apache2/secret opsec password
-
 COPY 000-default.conf /etc/apache2/sites-enabled/
 COPY 000-default.conf /etc/apache2/sites-available/
 
