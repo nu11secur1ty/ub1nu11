@@ -8,9 +8,10 @@ Give username
 ```
 Give password
 ```
-# you must use a strong passwords
+# you must use strong passwords
 ~~password~~
 ```
+# WARNING: The name of the store file must be (protect) this is required!
 Give storesec_file
 protect
 Adding password for user user
@@ -25,7 +26,7 @@ Give username
 ```
 Give password
 ```
-# you must use a strong passwords
+# you must use strong passwords
 ~~password~~
 ```
 Adding password for user second_user
