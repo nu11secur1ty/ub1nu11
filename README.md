@@ -23,6 +23,11 @@ docker run -t -i nu11secur1ty/ub1nu11 /bin/bash
 ```bash
 git clone https://github.com/nu11secur1ty/ub1nu11.git
 cd ub1nu11
+docker-comopse up -d
+# Web testing
+http://localhost:8080/
+http://localhost:8080/info.php
+# Shell
 docker-compose exec ub1nu11 /bin/bash
 ```
 
@@ -32,11 +37,6 @@ docker-compose exec ub1nu11 /bin/bash
 ~~docker run -d -p 8080:80 --name samurai nu11secur1ty/ub1nu11~~
 ~~```~~
 
-- Testing
-```bash
-http://localhost:8080/
-http://localhost:8080/info.php
-```
 - MySQL
 ```bash
 bash logininside.sh
