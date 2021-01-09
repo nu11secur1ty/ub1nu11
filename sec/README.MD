@@ -13,7 +13,7 @@ Give password
 ```
 Give storesec_file
 protect
-Adding password for user `user`
+Adding password for user user
 ```
 -------------------------------------------------------------------
 
@@ -28,5 +28,5 @@ Give password
 # you must use a strong passwords
 ~~password~~
 ```
-Adding password for user `second_user`
+Adding password for user second_user
 ```
