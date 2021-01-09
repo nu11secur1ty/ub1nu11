@@ -8,17 +8,9 @@ https://hub.docker.com/r/nu11secur1ty/ub1nu11
 - ***Apache2.4***
 - ***PHP 7***
 - ***Maria DB***
---------------------------------------------------------------------------------------------
-# Fast way to starting this samurai - docker
-- Getting the docker
-```bash
-docker pull nu11secur1ty/ub1nu11
-```
-- terminal access
-```bash
-docker run -t -i nu11secur1ty/ub1nu11 /bin/bash
-```
+
 -----------------------------------------------------------------------------------
+
 - - - ***Direct run and `shell` access***
 ```bash
 git clone https://github.com/nu11secur1ty/ub1nu11.git
