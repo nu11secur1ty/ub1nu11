@@ -1,1 +1,6 @@
-b
+  apacheapi:
+    image: nu11secur1ty/apache-wops:latest
+    hostname: apache2
+    restart: always
+    ports:
+      - "8080:80"
