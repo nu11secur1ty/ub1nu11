@@ -79,17 +79,6 @@ bash logininside.sh
 mysql -uroot -ppassword
 ```
 
-# Login in docker
-```bash
-bash logininside.sh
-```
-- Output must be
-```xml
-root@252a679b8104:/# 
-root@252a679b8104:/# 
-root@252a679b8104:/# 
-root@252a679b8104:/# 
-```
 # Stop samurai ub1nu11 docker
 ```bash
 bash stopsamurai.sh
