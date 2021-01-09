@@ -14,10 +14,10 @@ Give password
 Give storesec_file
 protect
 Adding password for user `user`
-
+```
 -------------------------------------------------------------------
 
-```txt
+```
 root@nu11secur1ty-dev:~/ub1nu11/sec# bash appendsec.sh 
 Give username
 ```
