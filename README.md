@@ -18,8 +18,11 @@ docker pull nu11secur1ty/ub1nu11
 ```bash
 docker run -t -i nu11secur1ty/ub1nu11 /bin/bash
 ```
-- - - docker-compose shell access
+-----------------------------------------------------------------------------------
+- - - docker-compose direct run and `shell` access
 ```bash
+git clone https://github.com/nu11secur1ty/ub1nu11.git
+cd ub1nu11
 docker-compose exec ub1nu11 /bin/bash
 ```
 
