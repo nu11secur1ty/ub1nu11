@@ -1,5 +1,5 @@
-  apacheapi:
-    image: nu11secur1ty/apache-wops:latest
+  ub1nu11:
+    image: nu11secur1ty/ub1nu11:latest
     hostname: apache2
     restart: always
     ports:
