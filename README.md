@@ -26,10 +26,11 @@ cd ub1nu11
 docker-compose exec ub1nu11 /bin/bash
 ```
 
-_Starting the docker_
-```bash
-docker run -d -p 8080:80 --name samurai nu11secur1ty/ub1nu11
-```
+~~Starting the docker~~
+~~```bash~~
+~~docker run -d -p 8080:80 --name samurai nu11secur1ty/ub1nu11~~
+~~```~~
+
 - Testing
 ```bash
 http://localhost:8080/
