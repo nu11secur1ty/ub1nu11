@@ -11,6 +11,7 @@ Give password
 # you must use strong passwords
 ~~password~~
 ```
+# WARNING: The name of the store file must be (protect) this is required!
 Give storesec_file
 protect
 Adding password for user user
