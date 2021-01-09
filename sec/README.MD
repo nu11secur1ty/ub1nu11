@@ -8,7 +8,7 @@ Give username
 ```
 Give password
 ```
-# you must use a strong passwords
+# you must use strong passwords
 ~~password~~
 ```
 Give storesec_file
@@ -25,7 +25,7 @@ Give username
 ```
 Give password
 ```
-# you must use a strong passwords
+# you must use strong passwords
 ~~password~~
 ```
 Adding password for user second_user
