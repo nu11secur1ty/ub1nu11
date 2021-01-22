@@ -50,7 +50,7 @@ EXPOSE 443 8080
 
 # Evironment
 RUN rm -rf /var/www/html/*
-COPY scp -r /OPSECCalc/ /var/www/html/
+RUN scp -r /OPSECCalc/ /var/www/html/
 # Env SIEM
 COPY /webapp/* /var/www/html/
 COPY /sec/makesec.sh /
