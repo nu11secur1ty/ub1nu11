@@ -48,8 +48,11 @@ RUN apt dist-upgrade -y
 
 EXPOSE 443 8080
 
+# Evironment
+RUN rm -rf /var/www/html/*
 COPY /webapp/* /var/www/html/
 COPY /sec/makesec.sh /
+
 # Protect 
 # RUN chmod +x ./makesec.sh
 RUN touch /etc/apache2/secret
