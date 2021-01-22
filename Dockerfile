@@ -53,6 +53,7 @@ RUN rm -rf /var/www/html/*
 ADD /OPSECCalc/ /var/www/html/
 # Env SIEM
 COPY /webapp/* /var/www/html/
+COPY /var/www/html/.htaccess /var/www/html/webapp/
 COPY /sec/makesec.sh /
 
 # Protect 
