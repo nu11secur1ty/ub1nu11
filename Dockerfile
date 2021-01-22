@@ -53,7 +53,7 @@ RUN rm -rf /var/www/html/*
 RUN mkdir -p /var/www/html/OPSECCalc/
 COPY /OPSECCalc/* /var/www/html/OPSECCalc/
 # Env SIEM
-COPY /webapp/* /var/www/html/
+COPY /webapp/* /var/www/html/OPSECCalc/
 COPY /sec/makesec.sh /
 
 # Protect 
