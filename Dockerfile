@@ -50,7 +50,8 @@ EXPOSE 443 8080
 
 # Evironment
 RUN rm -rf /var/www/html/*
-WORKDIR /var/www/html/OPSECCalc
+RUN mkdir -p /var/www/html/OPSECCalc
+RUN chmod -R 775 /var/www/html/OPSECCalc/
 COPY /OPSECCalc/* /var/www/html/OPSECCalc/
 
 # Env SIEM
