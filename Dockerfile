@@ -52,7 +52,7 @@ EXPOSE 443 8080
 RUN rm -rf /var/www/html/*
 ADD index.html /var/www/html/
 RUN mkdir -p /var/www/html/OPSECCalc
-ADD /webapp/OPSECCalc /var/www/html/OPSECCalc
+ADD /webapp/OPSECCalc /var/www/html/OPSECCalc/
 
 # Env SIEM
 COPY /webapp/* /var/www/html/
