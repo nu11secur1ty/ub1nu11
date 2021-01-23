@@ -19,7 +19,10 @@ RUN apt update && apt install -y apache2 \
  openssl \
  php \
  php-cli \
- php-apcu
+ php-apcu \
+ less \
+ vim \
+ gcc
 
 # Install MariaDB and set default root password
 
