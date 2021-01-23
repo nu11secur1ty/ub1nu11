@@ -65,7 +65,7 @@ COPY /sec/makesec.sh /
 # RUN chmod +x ./makesec.sh
 RUN touch /etc/apache2/secret
 COPY /sec/protect /etc/apache2/secret
-ADD .htaccess /var/www/html/webapp/
+ADD .htaccess /var/www/html/
 
 COPY 000-default.conf /etc/apache2/sites-enabled/
 COPY 000-default.conf /etc/apache2/sites-available/
