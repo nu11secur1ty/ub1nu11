@@ -63,10 +63,12 @@ bash startsamurai.sh
 ```url
 http://localhost:8080/
 ```
+# This is a custom test
 - PHP7
 ```url
 http://localhost:8080/info.php
 ```
+
 - MysQL
 ```bash
 bash logininside.sh
