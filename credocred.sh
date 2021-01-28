@@ -3,5 +3,5 @@
 
 echo "Give the new user"
 	read user
-htpasswd /etc/nginx/conf.d/kibana.htpasswd $user
+htpasswd /etc/apache2/secret $user
 	  exit 0
