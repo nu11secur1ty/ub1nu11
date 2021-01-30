@@ -25,7 +25,7 @@ docker-compose exec ub1nu11 /bin/bash
 - - - default user and password:
 ```
 user: opsec
-password: k@ufl@nd#rsk1ZmE1s
+password: Pr#d@TEL#ten#sAd0brEd06l#
 ```
 ~~Starting the docker~~
 
