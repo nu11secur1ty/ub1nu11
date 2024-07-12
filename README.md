@@ -29,18 +29,18 @@ The ub1nu11 installation needs at least:
 
 ### Install
 ```
-env bash -c "$(curl -sL https://raw.githubusercontent.com/f0rc3ps/ub1nu11/master/installUB.sh)"
+env bash -c "$(curl -sL https://raw.githubusercontent.com/nu11secur1ty/ub1nu11/master/installUB.sh)"
 ```
 ### Update:
 
 - ***NOTE:*** When you move your machine on the other network you must use ***updateUB1nu11docker-only.sh***
 
 ```
-env bash -c "$(curl -sL https://raw.githubusercontent.com/f0rc3ps/ub1nu11/master/updateUB1nu11docker-only.sh)"
+env bash -c "$(curl -sL https://raw.githubusercontent.com/nu11secur1ty/ub1nu11/master/updateUB1nu11docker-only.sh)"
 ```
 ### Uninstall:
 ```
-env bash -c "$(curl -sL https://raw.githubusercontent.com/f0rc3ps/ub1nu11/master/uninstallUB.sh)"
+env bash -c "$(curl -sL https://raw.githubusercontent.com/nu11secur1ty/ub1nu11/master/uninstallUB.sh)"
 ```
 -----------------------------------------------------------------------------------
 
@@ -71,7 +71,7 @@ password: Pr#d@TEL#ten#sAd0brEd06l#
 ## Starting the ub1nu11 dirrectly
 
 ```bash
-docker run -d -p 80:80 --name ub1nu11 f0rc3ps/ub1nu11
+docker run -d -p 80:80 --name ub1nu11 nu11secur1ty/ub1nu11
 ```
 
 ## MySQL management
@@ -90,11 +90,11 @@ mysql -uroot -ppassword
 
 - Getting a source
 ```bash
-git clone https://github.com/f0rc3ps/ub1nu11.git
+git clone https://github.com/nu11secur1ty/ub1nu11.git
 ```
 - Building a docker ub1nu11
 ```bash
-docker build -t f0rc3ps/ub1nu11 .
+docker build -t nu11secur1ty/ub1nu11 .
 ```
 # Building application
 ```bash
