@@ -21,7 +21,7 @@ echo "### Starting the Docker service...###"
 systemctl start docker.service
 
 # get ub1nu11 
-git clone https://github.com/f0rc3ps/ub1nu11.git
+git clone https://github.com/nu11secur1ty/ub1nu11.git
 
 # set ip
 cd ub1nu11/docker/
